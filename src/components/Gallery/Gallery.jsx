@@ -7,7 +7,6 @@ import foto4 from "../../assets/images/foto4.jpg"
 import foto5 from "../../assets/images/foto5.jpg"
 import foto6 from "../../assets/images/foto6.jpg"
 import foto7 from "../../assets/images/foto7.jpg"
-import foto8 from "../../assets/images/foto8.jpg"
 
 function Gallery() {
   const photos = [
@@ -18,7 +17,6 @@ function Gallery() {
     foto5,
     foto6,
     foto7,
-    foto8,
   ]
 
   const [current, setCurrent] = useState(0)

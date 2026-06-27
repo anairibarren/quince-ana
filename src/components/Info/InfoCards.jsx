@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 import calendar from "../../assets/icons/calendar.WEBP"
-import pin from "../../assets/icons/pin.gif"
+import pin from "../../assets/icons/pin.webp"
 import diamond from "../../assets/icons/diamond.WEBP"
 
 function InfoBlock({
@@ -23,6 +23,7 @@ function InfoBlock({
         items-center
         justify-center
         text-center
+        px-8
       "
       style={{
         backgroundColor: background,
@@ -30,11 +31,12 @@ function InfoBlock({
         fontFamily: "Montserrat, sans-serif",
       }}
     >
+
       {/* ICONO */}
       <img
         src={image}
         alt={title}
-        className="w-[90px] h-[90px] md:w-[110px] md:h-[110px] object-contain mb-6"
+        className="w-[85px] h-[85px] md:w-[100px] md:h-[100px] object-contain mb-6"
       />
 
       {/* TITULO */}
@@ -76,6 +78,7 @@ function InfoBlock({
 
         </div>
       )}
+
     </div>
   )
 }
@@ -118,50 +121,51 @@ function InfoCards() {
         ${isVisible ? "opacity-100" : "opacity-0 translate-y-8"}
       `}
     >
+
       {/* CUÁNDO */}
-        <InfoBlock
+      <InfoBlock
         background="#C5BAA7"
         textColor="#FFFFFF"
         image={calendar}
         title="¿CUÁNDO?"
-        >
+      >
         <p>29 DE AGOSTO DE 2026</p>
-
         <p>| 21:00 HS - 05:00 HS |</p>
       </InfoBlock>
 
       {/* DÓNDE */}
-        <InfoBlock
+      <InfoBlock
         background="#FFFFFF"
         textColor="#C5BAA7"
         image={pin}
         title="¿DÓNDE?"
         button={true}
         link="https://maps.app.goo.gl/dAyam8ZLhgbXVAoy6"
-        >
+      >
         <p className="text-lg font-medium">
           Malevo Eventos
         </p>
-
       </InfoBlock>
 
       {/* DRESS CODE */}
-    <InfoBlock
-    background="#C5BAA7"
-    textColor="#FFFFFF"
-    image={diamond}
-    title="DRESS CODE"
-    >
+      <InfoBlock
+        background="#C5BAA7"
+        textColor="#FFFFFF"
+        image={diamond}
+        title="DRESS CODE"
+      >
         <p className="font-semibold uppercase">
           Elegante
         </p>
 
-        <div className="w-[80px] h-[2px] bg-[#FFFFFF] rounded-full mx-auto my-5" />
+        <div className="w-[80px] h-[2px] bg-white rounded-full mx-auto my-5" />
 
         <p>
           Evitar el color azul
         </p>
+
       </InfoBlock>
+
     </section>
   )
 }

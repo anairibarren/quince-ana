@@ -1,10 +1,12 @@
-import sobre from "../../assets/icons/rsvp.gif"
+import sobre from "../../assets/icons/rsvp.webp"
 
 function RSVP() {
   const phone = "5492323221286"
 
   const message = encodeURIComponent(
-`Hola Ana! Te confirmo mi asistencia a tu fiesta!
+`Hola Ana!
+
+Te confirmo mi asistencia a tu fiesta.
 
 Cantidad de personas:
 
@@ -16,12 +18,12 @@ Restricción alimentaria:`
   return (
     <section
       id="asistencia"
-      className="bg-white flex justify-center py-20"
+      className="bg-[#C5BAA7] py-20"
     >
-      <div className="max-w-[900px] w-full px-6 text-center">
+      <div className="max-w-3xl mx-auto px-6 text-center">
 
         {/* ICONO */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-8">
           <img
             src={sobre}
             alt="Confirmar asistencia"
@@ -29,32 +31,34 @@ Restricción alimentaria:`
           />
         </div>
 
-        {/* TÍTULO */}
+        {/* TITULO */}
         <h2
-          className="text-[30px] font-bold uppercase text-[#8B7355]"
+          className="text-[30px] font-bold uppercase text-white"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
           Confirmá tu asistencia
         </h2>
 
-        {/* LÍNEA */}
-        <div className="w-[160px] h-[4px] bg-[#C5BAA7] rounded-full mx-auto mt-5 mb-8" />
+        {/* LINEA */}
+        <div className="w-[160px] h-[3px] bg-[#E1DACF] rounded-full mx-auto mt-5 mb-8" />
 
         {/* TEXTO */}
         <div
-          className=" mx-auto text-[#8B7355]"
+          className="max-w-[520px] mx-auto text-white"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
-          <p className="uppercase text-md font-bold">
+          <p className="uppercase tracking-[0.08em] font-semibold text-lg">
             Antes del 29 de julio de 2026
           </p>
 
-          <p className="mt-4 text-sm">
-            En caso de tener alguna restricción alimentaria, por favor informalo al momento de confirmar tu asistencia.
+          <p className="mt-4 text-sm leading-7 opacity-95">
+            En caso de tener alguna restricción alimentaria,
+            por favor informalo al momento de confirmar tu
+            asistencia.
           </p>
         </div>
 
-        {/* BOTÓN */}
+        {/* BOTON */}
         <a
           href={whatsappLink}
           target="_blank"
@@ -64,12 +68,16 @@ Restricción alimentaria:`
             items-center
             gap-3
             mt-10
-            px-8
+            px-9
             py-4
-            bg-[#D4CCBC]
-            text-white
+            rounded-full
+            bg-[#E1DACF]
+            text-[#8B7355]
             font-semibold
             uppercase
+            tracking-[0.10em]
+            transition
+            hover:scale-105
           "
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >

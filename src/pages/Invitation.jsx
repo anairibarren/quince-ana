@@ -4,6 +4,7 @@ import Countdown from "../components/Countdown/Countdown"
 import InfoCards from "../components/Info/InfoCards"
 import Gallery from "../components/Gallery/Gallery"
 import Gift from "../components/Gift/Gift"
+import Photo from "../components/PhotoDivider/Photo"
 import RSVP from "../components/RSVP/RSVP"
 import Footer from "../components/Footer/Footer"
 
@@ -16,6 +17,7 @@ function Invitation() {
       <Gallery />
       <InfoCards />
       <Gift />
+      <Photo />
       <RSVP />
       <Footer />
     </>

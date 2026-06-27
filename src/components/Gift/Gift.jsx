@@ -69,8 +69,9 @@ function Gift() {
             onClick={() => setIsOpen(true)}
             className="
               mt-8
-              px-6
+              px-9
               py-4
+              rounded-full
               bg-[#E1DACF]
               text-[#8B7355]
               uppercase

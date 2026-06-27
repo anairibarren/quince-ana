@@ -99,7 +99,7 @@ function Countdown() {
           <div className="w-[90px] h-[4px] bg-[#E1DACF] rounded-full mb-8" />
 
           <p
-            className="text-white text-[18px] md:text-[22px] leading-[2] tracking-[0.08em] uppercase"
+            className="text-white text-[18px] md:text-[22px]  tracking-[0.08em] uppercase"
             style={{ fontFamily: "Montserrat, sans-serif" }}
           >
             Una noche, un sueño, un recuerdo para toda la vida

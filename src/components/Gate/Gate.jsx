@@ -16,22 +16,27 @@ function Gate({ onEnter }) {
   return (
     <div
       className={`
-        fixed inset-0 flex flex-col items-center justify-center text-center
-        bg-[#E1DACF] transition-opacity duration-700
+        fixed inset-0
+        flex flex-col items-center justify-center
+        text-center
+        px-8
+        bg-[#E1DACF]
+        transition-opacity
+        duration-700
         ${fadeOut ? "opacity-0" : "opacity-100"}
       `}
     >
-      {/* TITULO */}
-      <div className="leading-none mb-8">
+      {/* TÍTULO */}
+      <div>
         <h2
-          className="text-[20px] text-[#f3f4f6] tracking-[0.3em] uppercase"
+          className="text-[20px] uppercase tracking-[0.30em] text-[#F3F4F6]"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
           Mis XV
         </h2>
 
         <h1
-          className="text-[100px] text-[#f3f4f6]"
+          className="text-[100px] leading-none text-[#F3F4F6]"
           style={{ fontFamily: "Allura, cursive" }}
         >
           Ana
@@ -40,18 +45,36 @@ function Gate({ onEnter }) {
 
       {/* FRASE */}
       <p
-        className="text-[12px] text-[#f3f4f6] leading-loose tracking-[0.2em] max-w-xl mb-10"
+        className="
+          mt-3
+          mb-10
+          w-full
+          max-w-4xl
+          text-[16px]
+          md:text-[14px]
+          leading-6
+          text-[#F3F4F6]
+        "
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
         Hay momentos que merecen ser vividos una sola vez.
-        <br />
         Te espero para compartir este día tan especial.
       </p>
 
-      {/* BOTON */}
+      {/* BOTÓN */}
       <button
         onClick={handleEnter}
-        className="px-10 py-4 bg-[#C5BAA7] text-white uppercase tracking-[0.15em] font-semibold transition hover:opacity-80"
+        className="
+          px-10
+          py-4
+          bg-[#C5BAA7]
+          text-white
+          uppercase
+          tracking-[0.15em]
+          font-semibold
+          transition
+          hover:opacity-80
+        "
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
         {loading ? "Ingresando..." : "Ingresar"}

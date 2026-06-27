@@ -44,8 +44,7 @@ function Navbar() {
             px-5
             h-16
             rounded-full
-            bg-white/50
-            backdrop-blur-xl
+            bg-white
             border border-white/30
             shadow-lg
           "

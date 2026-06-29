@@ -118,14 +118,14 @@ function TimeBox({ number, label }) {
   return (
     <div className="flex flex-col items-center min-w-[70px]">
       <span
-        className="text-4xl md:text-5xl font-bold text-[#8B7355]"
+        className="text-4xl md:text-5xl font-bold text-[#D8CFC2]"
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
         {number}
       </span>
 
       <span
-        className="text-[11px] md:text-[12px] font-semibold tracking-[0.25em] mt-2 text-[#8B7355]"
+        className="text-[11px] md:text-[12px] font-semibold tracking-[0.25em] mt-2 text-[#D8CFC2]"
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
         {label}

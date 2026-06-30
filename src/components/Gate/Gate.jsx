@@ -20,7 +20,7 @@ function Gate({ onEnter }) {
         flex flex-col items-center justify-center
         text-center
         px-8
-        bg-[#E1DACF]
+        bg-[#e5d8c3]
         transition-opacity
         duration-700
         ${fadeOut ? "opacity-0" : "opacity-100"}
@@ -67,7 +67,7 @@ function Gate({ onEnter }) {
         className="
           px-10
           py-4
-          bg-[#C5BAA7]
+          bg-[#b8ac98]
           text-white
           uppercase
           tracking-[0.15em]

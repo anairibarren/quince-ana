@@ -45,33 +45,31 @@ function Navbar() {
             h-16
             rounded-full
             bg-white
-            border border-white/30
             shadow-lg
           "
         >
 
-          {/* LOGO */}
-          <a
-            href="#hero"
-            aria-label="Ir al inicio"
-            className="flex items-center gap-2 text-[#C5BAA7]"
+         {/* LOGO */}
+        <a
+          href="#hero"
+          aria-label="Ir al inicio"
+          className="flex items-center"
+        >
+          <h2
+            className="flex items-center gap-2 text-[17px] md:text-[28px] font-semibold text-[#B5A6A6]"
+            style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
-            <span
-              className="text-[20px]"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
-            >
-              Mis XV
+            <span>Mis XV</span>
+
+            <span className="text-[#C5BAA7] text-[12px] md:text-[16px]">
+              ✿
             </span>
 
-            <span className="text-[#C5BAA7] text-[14px]">✿</span>
-
-            <span
-              className="text-[20px]"
-              style={{ fontFamily: "Allura, cursive" }}
-            >
+            <span className="font-bold text-[17px]">
               Ana
             </span>
-          </a>
+          </h2>
+        </a>
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex flex-1 justify-center items-center gap-8">

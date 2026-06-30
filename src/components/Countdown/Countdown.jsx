@@ -61,23 +61,21 @@ function Countdown() {
       {/* TITULO */}
       <div
         className={`
-          flex flex-col items-center text-center mb-10 mt-14
+          flex justify-center items-center text-center mb-10 mt-14
           transition-all duration-700
           ${isVisible ? "opacity-100" : "opacity-0 translate-y-6"}
         `}
       >
-        <span
-          className="text-[26px] md:text-[22px] tracking-[0.35em] text-[#C5BAA7] font-medium uppercase"
-          style={{ fontFamily: "Montserrat, sans-serif" }}
-        >
-          MIS <strong className="font-bold">XV</strong>
-        </span>
-
         <h2
-          className="text-[80px] md:text-[110px] leading-none text-[#C5BAA7] -mt-2"
-          style={{ fontFamily: "Allura, cursive" }}
+          className="text-[#b5a6a6] text-[28px] md:text-[36px] font-semibold"
+          style={{
+            fontFamily: "Nunito Sans, sans-serif",
+          }}
         >
-          Ana
+          Mis XV{" "}
+          <span className="font-extrabold">
+            Ana
+          </span>
         </h2>
       </div>
 

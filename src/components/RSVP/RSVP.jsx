@@ -4,13 +4,9 @@ function RSVP() {
   const phone = "5492323221286"
 
   const message = encodeURIComponent(
-`Hola Ana!
-
-Te confirmo mi asistencia a tu fiesta.
-
-Cantidad de personas:
-
-Restricción alimentaria:`
+  `¡Hola Ana! Te confirmo la asistencia a tu fiesta.
+  Cantidad de personas:
+  Restricción alimentaria:`
   )
 
   const whatsappLink = `https://wa.me/${phone}?text=${message}`

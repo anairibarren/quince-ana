@@ -9,32 +9,32 @@ function Gift() {
     <section>
 
       {/* FRASE */}
-      <div className="bg-[#F6F2EE] py-20 px-6">
+      <div className="py-20 px-6 bg-white">
 
         <div className="max-w-5xl mx-auto text-center">
 
-          <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mb-8" />
+          <div className="w-40 h-[3px] bg-black mx-auto mb-4" />
 
           <p
-           className="
-            text-[#B5A6A6]
-            uppercase
-            leading-relaxed
-            text-[18px]
-            md:text-[22px]
-          "
-          style={{
-            fontFamily: "Montserrat, sans-serif",
-          }}
+            className="
+              text-black
+              uppercase
+              leading-relaxed
+              text-[18px]
+              md:text-[22px]
+            "
+            style={{
+              fontFamily: "Montserrat, sans-serif",
+            }}
           >
             Hagamos que sea una noche
             <br />
             <span className="font-semibold">
-              inolvidable.
+              ¡inolvidable!
             </span>
           </p>
 
-          <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mt-8" />
+          <div className="w-40 h-[3px] bg-black mx-auto mt-4" />
 
         </div>
 
@@ -42,7 +42,7 @@ function Gift() {
 
       {/* BLOQUE */}
 
-      <div className="bg-[#D7CBC3] pb-20 pt-10 px-6">
+      <div className="bg-black pt-14 pb-20 px-6">
 
         <div
           className="max-w-2xl mx-auto text-center text-white"
@@ -55,7 +55,7 @@ function Gift() {
             className="w-[100px] h-[100px] mx-auto mb-8"
           />
 
-          <h2 className="text-[28px] font-semibold uppercase mb-5 tracking-[0.10em]">
+          <h2 className="text-[28px] font-semibold uppercase tracking-[0.10em] mb-5">
             Regalo
           </h2>
 
@@ -72,12 +72,12 @@ function Gift() {
               px-4
               py-3
               bg-white
-              text-[#B5A6A6]
+              text-black
               uppercase
               font-semibold
               tracking-[0.10em]
               transition
-              hover:opacity-90
+              hover:bg-gray-100
             "
           >
             Ver datos

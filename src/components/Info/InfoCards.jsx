@@ -19,13 +19,12 @@ function InfoBlock({
     <div
       className="
         w-full
-        min-h-[400px]
+        min-h-[350px]
         flex
         flex-col
         items-center
         justify-center
         text-center
-        px-8
       "
       style={{
         backgroundColor: background,
@@ -57,13 +56,13 @@ function InfoBlock({
         <img
           src={image}
           alt={title}
-          className="w-[85px] h-[85px] md:w-[100px] md:h-[100px] object-contain mb-6"
+          className="w-[85px] h-[85px] md:w-[100px] md:h-[100px] object-contain mb-4"
         />
 
-        {/* TITULO */}
+        {/* TÍTULO */}
         <h3
-          className={`text-[20px] md:text-[22px] font-semibold tracking-[0.20em] mb-6 ${
-            light ? "text-white" : "text-[#b1927d]"
+          className={`text-[22px] font-semibold mb-2 ${
+            light ? "text-white" : "text-black"
           }`}
         >
           {title}
@@ -71,8 +70,8 @@ function InfoBlock({
 
         {/* CONTENIDO */}
         <div
-          className={`text-[16px] md:text-[18px] leading-[1.8] space-y-3 ${
-            light ? "text-white" : "text-[#b1927d]"
+          className={`text-[18px] space-y-1 ${
+            light ? "text-white" : "text-black"
           }`}
         >
           {children}
@@ -82,7 +81,7 @@ function InfoBlock({
         {button && (
           <div className="flex flex-col items-center mt-6">
 
-            <div className="w-[80px] h-[2px] bg-[#d0bbad] rounded-full mb-6" />
+            <div className="w-[100px] h-[3px] bg-black mb-6" />
 
             <a
               href={link}
@@ -91,13 +90,11 @@ function InfoBlock({
               className="
                 px-4
                 py-3
-                bg-[#d0bbad]
+                bg-black
                 text-white
                 font-semibold
                 text-md
                 uppercase
-                transition
-                hover:opacity-90
               "
             >
               Cómo llegar
@@ -151,7 +148,7 @@ function InfoCards() {
 
       {/* CUÁNDO */}
       <InfoBlock
-        background="#D7CBC3"
+        background="#000000"
         image={calendar}
         title="¿CUÁNDO?"
         delay={0}
@@ -172,14 +169,14 @@ function InfoCards() {
         delay={150}
         isVisible={isVisible}
       >
-        <p className="text-lg font-medium">
+        <p className="font-medium">
           Malevo Eventos
         </p>
       </InfoBlock>
 
       {/* DRESS CODE */}
       <InfoBlock
-        background="#D7CBC3"
+        background="#000000"
         image={diamond}
         title="DRESS CODE"
         delay={300}
@@ -190,7 +187,7 @@ function InfoCards() {
           Elegante
         </p>
 
-        <div className="w-[80px] h-[3px] rounded-full bg-white rounded-full mx-auto my-5" />
+        <div className="w-[100px] h-[3px] bg-white mx-auto my-4" />
 
         <p>
           Evitar el color azul

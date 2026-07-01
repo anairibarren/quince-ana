@@ -1,4 +1,4 @@
-import fotoInicio from "../../assets/images/foto-inicio.jpg"
+import fotoInicio from "../../assets/images/foto-inicio2.jpg"
 
 function Hero() {
   return (
@@ -12,7 +12,7 @@ function Hero() {
       />
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-[#B5A6A6]/35" />
+      <div className="absolute inset-0 bg-black/35" />
 
     </section>
   )

@@ -31,7 +31,7 @@ function Phrase() {
 
   return (
 
-    <section className="bg-[#F6F2EE] py-20 px-6">
+    <section className=" py-20 px-6">
 
       <div
         ref={contentRef}
@@ -49,11 +49,11 @@ function Phrase() {
         `}
       >
 
-        <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mb-8" />
+        <div className="w-40 h-[3px] rounded-full bg-black mx-auto mb-4" />
 
         <p
           className="
-            text-[#B5A6A6]
+            text-black
             uppercase
             leading-relaxed
             text-[18px]
@@ -68,7 +68,7 @@ function Phrase() {
           un recuerdo para toda la vida.
         </p>
 
-        <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mt-8" />
+        <div className="w-40 h-[3px] rounded-full bg-black mx-auto mt-4" />
 
       </div>
 

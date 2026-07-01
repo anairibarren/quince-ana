@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import gift from "../../assets/icons/gift.GIF"
 
 function GiftModal({ isOpen, onClose }) {
+
   const alias = "anaprina"
   const banco = "Mercado Pago"
 
@@ -9,6 +9,7 @@ function GiftModal({ isOpen, onClose }) {
 
   const handleCopy = async () => {
     try {
+
       await navigator.clipboard.writeText(alias)
 
       setCopied(true)
@@ -16,12 +17,14 @@ function GiftModal({ isOpen, onClose }) {
       setTimeout(() => {
         setCopied(false)
       }, 2000)
+
     } catch (err) {
       console.error("Error al copiar el alias")
     }
   }
 
   useEffect(() => {
+
     const handleKey = (e) => {
       if (e.key === "Escape") {
         onClose()
@@ -35,32 +38,33 @@ function GiftModal({ isOpen, onClose }) {
     return () => {
       document.removeEventListener("keydown", handleKey)
     }
+
   }, [isOpen, onClose])
 
   if (!isOpen) return null
 
   return (
+
     <div
-      onClick={onClose}
       className="
         fixed
         inset-0
-        z-[999]
-        bg-black/50
-        backdrop-blur-sm
+        bg-black/70
         flex
         items-center
         justify-center
         px-6
+        z-50
       "
+      onClick={onClose}
     >
+
       <div
         onClick={(e) => e.stopPropagation()}
         className="
           w-full
           max-w-[420px]
-          bg-[#D7CBC3]
-          rounded-2xl
+          bg-white
           px-8
           py-10
           text-center
@@ -68,36 +72,35 @@ function GiftModal({ isOpen, onClose }) {
         "
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
-        <img
-          src={gift}
-          alt="Regalo"
-          className="w-[80px] h-[80px] mx-auto mb-6"
-        />
 
-        <h3 className="text-white text-[24px] font-semibold mb-8">
-          REGALO
+        <h3 className="text-black text-[24px] font-semibold mb-8 uppercase tracking-[0.10em]">
+          Regalo
         </h3>
 
-        <div className="space-y-6 text-white mb-8">
+        <div className="space-y-7 text-black mb-8">
 
           <div>
-            <p className="uppercase tracking-[0.15em] text-sm">
+
+            <p className="uppercase tracking-[0.15em] text-sm mb-2">
               Alias
             </p>
 
             <p className="text-xl font-semibold">
               {alias}
             </p>
+
           </div>
 
           <div>
-            <p className="uppercase tracking-[0.15em] text-sm">
+
+            <p className="uppercase tracking-[0.15em] text-sm mb-2">
               Banco
             </p>
 
             <p className="text-xl font-semibold">
               {banco}
             </p>
+
           </div>
 
         </div>
@@ -105,15 +108,15 @@ function GiftModal({ isOpen, onClose }) {
         <button
           onClick={handleCopy}
           className="
-            mt-10
             w-full
-              px-4
-              py-3
-              bg-white
-              text-[#B5A6A6]
-              uppercase
-              font-semibold
-              tracking-[0.10em]
+            py-3
+            bg-black
+            text-white
+            uppercase
+            font-semibold
+            tracking-[0.10em]
+            transition
+            hover:bg-neutral-800
           "
         >
           {copied ? "¡Alias copiado!" : "Copiar alias"}
@@ -124,19 +127,23 @@ function GiftModal({ isOpen, onClose }) {
           className="
             w-full
             mt-4
-            px-4
             py-3
             border
-            border-white
-            text-white
+            border-black
+            text-black
             uppercase
-              font-semibold
-              tracking-[0.10em]
+            font-semibold
+            tracking-[0.10em]
+            transition
+            hover:bg-black
+            hover:text-white
           "
         >
           Cerrar
         </button>
+
       </div>
+
     </div>
   )
 }

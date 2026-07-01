@@ -18,7 +18,7 @@ Restricción alimentaria:`
   return (
     <section
       id="asistencia"
-      className="bg-[#C5BAA7] py-20"
+      className="bg-[#D7CBC3] py-20"
     >
       <div className="max-w-3xl mx-auto px-6 text-center">
 
@@ -51,7 +51,7 @@ Restricción alimentaria:`
             Antes del 29 de julio de 2026
           </p>
 
-          <p className="mt-4 text-sm leading-7 opacity-95">
+          <p className="text-[17px] leading-8 px-6 mt-2">
             En caso de tener alguna restricción alimentaria,
             por favor informalo al momento de confirmar tu
             asistencia.
@@ -68,16 +68,13 @@ Restricción alimentaria:`
             items-center
             gap-3
             mt-10
-            px-9
-            py-4
-            rounded-full
-            bg-[#E1DACF]
-            text-[#8B7355]
-            font-semibold
+            px-4
+            py-3
+            bg-white
+            text-[#B5A6A6]
             uppercase
+            font-semibold
             tracking-[0.10em]
-            transition
-            hover:scale-105
           "
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >

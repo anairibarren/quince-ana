@@ -6,36 +6,35 @@ function Gift() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <section
-      id="gift"
-      className="w-full"
-    >
+    <section>
+
       {/* FRASE */}
+      <div className="bg-[#F6F2EE] py-20 px-6">
 
-      <div className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
 
-        <div className="max-w-4xl mx-auto text-center">
-
-          <div className="w-[90px] h-[2px] bg-[#C5BAA7] rounded-full mx-auto mb-8" />
+          <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mb-8" />
 
           <p
-            className="
-              text-[#8B7355]
-              text-[20px]
-              md:text-[28px]
-              leading-[1.8]
-              tracking-[0.08em]
-              uppercase
-            "
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+           className="
+            text-[#B5A6A6]
+            uppercase
+            leading-relaxed
+            text-[18px]
+            md:text-[22px]
+          "
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+          }}
           >
-            Hagamos que sea una noche{" "}
-            <span className="font-bold">
+            Hagamos que sea una noche
+            <br />
+            <span className="font-semibold">
               inolvidable.
             </span>
           </p>
 
-          <div className="w-[90px] h-[2px] bg-[#C5BAA7] rounded-full mx-auto mt-8" />
+          <div className="w-20 h-[3px] rounded-full bg-[#D7CBC3] mx-auto mt-8" />
 
         </div>
 
@@ -43,39 +42,42 @@ function Gift() {
 
       {/* BLOQUE */}
 
-      <div className="bg-[#C5BAA7] py-16 px-6">
+      <div className="bg-[#D7CBC3] pb-20 pt-10 px-6">
 
         <div
           className="max-w-2xl mx-auto text-center text-white"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
+
           <img
             src={gift}
             alt="Regalo"
             className="w-[100px] h-[100px] mx-auto mb-8"
           />
 
-          <h2 className="text-3xl font-semibold mb-4">
-            REGALO
+          <h2 className="text-[28px] font-semibold uppercase mb-5 tracking-[0.10em]">
+            Regalo
           </h2>
 
-          <p className="text-md">
-            Habrá una urna en el salón para quienes deseen
-            dejar un regalo presencial. También puede ser mediante una
-            transferencia por Mercado Pago.
+          <p className="text-[17px] leading-8">
+            Habrá una urna en el salón para quienes deseen dejar un regalo
+            presencial. También puede ser mediante una transferencia por
+            Mercado Pago.
           </p>
 
           <button
             onClick={() => setIsOpen(true)}
             className="
-              mt-8
-              px-9
-              py-4
-              rounded-full
-              bg-[#E1DACF]
-              text-[#8B7355]
+              mt-10
+              px-4
+              py-3
+              bg-white
+              text-[#B5A6A6]
               uppercase
               font-semibold
+              tracking-[0.10em]
+              transition
+              hover:opacity-90
             "
           >
             Ver datos

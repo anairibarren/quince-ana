@@ -2,17 +2,17 @@ import fotoInicio from "../../assets/images/foto-inicio.jpg"
 
 function Hero() {
   return (
-    <section id="hero" className="w-full relative">
+    <section className="relative h-screen overflow-hidden">
 
-      {/* IMAGEN PRINCIPAL */}
+      {/* FOTO */}
       <img
         src={fotoInicio}
         alt="Ana XV"
-        className="w-full  object-cover"
+        className="w-full h-full object-cover"
       />
 
-      {/* OVERLAY ELEGANTE (beige suave) */}
-      <div className="absolute inset-0 bg-[#C5BAA7]/25" />
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-[#B5A6A6]/35" />
 
     </section>
   )

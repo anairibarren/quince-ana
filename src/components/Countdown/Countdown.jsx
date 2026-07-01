@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 
 function Countdown() {
+
   const eventDate = new Date("2026-08-29T21:00:00")
 
   const calculateTimeLeft = () => {
+
     const difference = eventDate - new Date()
 
     if (difference <= 0) {
@@ -25,111 +27,135 @@ function Countdown() {
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
   const [isVisible, setIsVisible] = useState(false)
+
   const sectionRef = useRef(null)
 
-  // TIMER
   useEffect(() => {
+
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft())
     }, 1000)
 
     return () => clearInterval(timer)
+
   }, [])
 
-  // SCROLL REVEAL
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+
         if (entry.isIntersecting) {
+
           setIsVisible(true)
           observer.disconnect()
+
         }
+
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     )
 
     if (sectionRef.current) {
+
       observer.observe(sectionRef.current)
+
     }
 
     return () => observer.disconnect()
+
   }, [])
 
   return (
-    <section id="countdown" ref={sectionRef} className="py-0">
 
-      {/* TITULO */}
+    <section
+      id="countdown"
+      ref={sectionRef}
+      className="
+        relative
+        -mt-[100vh]
+        h-screen
+        flex
+        flex-col
+        items-center
+        justify-center
+        text-center
+        z-10
+      "
+    >
+
       <div
         className={`
-          flex justify-center items-center text-center mb-10 mt-14
-          transition-all duration-700
+          transition-all
+          duration-700
           ${isVisible ? "opacity-100" : "opacity-0 translate-y-6"}
         `}
       >
+
+        {/* TITULO */}
+
         <h2
-          className="text-[#b5a6a6] text-[28px] md:text-[36px] font-semibold"
+          className="text-[40px] text-white md:text-[48px] font-medium"
           style={{
-            fontFamily: "Nunito Sans, sans-serif",
+            fontFamily: "Montserrat, sans-serif",
           }}
         >
           Mis XV{" "}
-          <span className="font-extrabold">
+          <span className="font-bold">
             Ana
           </span>
         </h2>
-      </div>
 
-      {/* CONTADOR */}
-      <div
-        className="flex justify-center gap-6 flex-wrap text-center mb-20"
-        aria-live="polite"
-      >
-        <TimeBox number={timeLeft.dias} label="DÍAS" />
-        <TimeBox number={timeLeft.horas} label="HORAS" />
-        <TimeBox number={timeLeft.minutos} label="MINUTOS" />
-        <TimeBox number={timeLeft.segundos} label="SEGUNDOS" />
-      </div>
+        {/* CONTADOR */}
 
-      {/* FRASE */}
-      <div className="bg-[#C5BAA7] py-12 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <div
+          className="flex justify-center gap-4 mt-8 flex-wrap"
+          aria-live="polite"
+        >
 
-          <div className="w-[90px] h-[4px] bg-[#E1DACF] rounded-full mb-8" />
-
-          <p
-            className="text-white text-[18px] md:text-[22px]  tracking-[0.08em] uppercase"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
-          >
-            Una noche, un sueño, un recuerdo para toda la vida
-          </p>
-
-          <div className="w-[90px] h-[4px] bg-[#E1DACF] rounded-full mt-8" />
+          <TimeBox number={timeLeft.dias} label="DÍAS" />
+          <TimeBox number={timeLeft.horas} label="HORAS" />
+          <TimeBox number={timeLeft.minutos} label="MINUTOS" />
+          <TimeBox number={timeLeft.segundos} label="SEGUNDOS" />
 
         </div>
+
       </div>
 
     </section>
+
   )
+
 }
 
 function TimeBox({ number, label }) {
+
   return (
+
     <div className="flex flex-col items-center min-w-[70px]">
+
       <span
-        className="text-4xl md:text-5xl font-bold text-[#D8CFC2]"
-        style={{ fontFamily: "Montserrat, sans-serif" }}
+        className="text-5xl md:text-6xl font-bold text-white"
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+        }}
       >
         {number}
       </span>
 
       <span
-        className="text-[11px] md:text-[12px] font-semibold tracking-[0.25em] mt-2 text-[#D8CFC2]"
-        style={{ fontFamily: "Montserrat, sans-serif" }}
+        className="uppercase font-semibold text-[14px] text-white"
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+        }}
       >
         {label}
       </span>
+
     </div>
+
   )
+
 }
 
 export default Countdown

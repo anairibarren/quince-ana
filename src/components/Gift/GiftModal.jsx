@@ -59,7 +59,7 @@ function GiftModal({ isOpen, onClose }) {
         className="
           w-full
           max-w-[420px]
-          bg-[#C5BAA7]
+          bg-[#D7CBC3]
           rounded-2xl
           px-8
           py-10
@@ -105,16 +105,15 @@ function GiftModal({ isOpen, onClose }) {
         <button
           onClick={handleCopy}
           className="
+            mt-10
             w-full
-            py-3
-            rounded-full
-            bg-[#E1DACF]
-            text-[#8B7355]
-            font-semibold
-            uppercase
-            tracking-[0.10em]
-            transition
-            hover:opacity-90
+              px-4
+              py-3
+              bg-white
+              text-[#B5A6A6]
+              uppercase
+              font-semibold
+              tracking-[0.10em]
           "
         >
           {copied ? "¡Alias copiado!" : "Copiar alias"}
@@ -125,13 +124,14 @@ function GiftModal({ isOpen, onClose }) {
           className="
             w-full
             mt-4
+            px-4
             py-3
-            rounded-full
             border
             border-white
             text-white
             uppercase
-            tracking-[0.10em]
+              font-semibold
+              tracking-[0.10em]
           "
         >
           Cerrar
